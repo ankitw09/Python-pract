@@ -1,0 +1,54 @@
+#practical 13
+
+#importing pandas numpy and scipy
+
+import pandas as pd
+import numpy as np
+from scipy import stats
+
+#reading csv file
+pf=pd.read_csv("D:\machine Learning\Csv files\data1.csv")
+
+#printing data of csv file
+print("printing the data : " ,pf)
+
+#print all data from file
+df = pd.DataFrame(pf)
+print(df)
+
+#calculating mean
+mean=np.mean(pf)
+print("mean: ",mean)
+
+#calculating median
+median = np.median(pf)
+print("median: ",median)
+
+#calculating mode
+mode = stats.mode(pf)
+print("mode: ",mode)
+
+
+*********************** OUTPUT *********************
+printing the data :  Data
+0     52
+1     36
+2     19
+3     69
+4     35
+5     34
+6     57
+7     61
+8     15
+9      0
+10    70
+11    36
+12    12
+13    14
+14    51
+15    45
+16    47
+mean:  Data    38.411765
+dtype: float64
+median:  36.0
+mode:  ModeResult(mode=array([[36]], dtype=int64), count=array([[2]]))
